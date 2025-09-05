@@ -1,0 +1,55 @@
+!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Selenium Methods Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f0f8ff; padding:20px; }
+    h2 { color:#2e8b57; }
+    .section { background:#fff; border:2px solid #2e8b57; border-radius:10px; padding:15px; margin:15px 0; }
+    label { display:block; margin:8px 0; }
+    button { padding:6px 12px; border:none; border-radius:5px; background:#4682b4; color:#fff; cursor:pointer; }
+    button:disabled { background:gray; cursor:not-allowed; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+
+  <h2>Selenium Methods Demo</h2>
+
+  <!-- isDisplayed Example -->
+  <div class="section">
+    <h3 style="color:#1e90ff;">isDisplayed()</h3>
+    <p><strong>Visible Button:</strong> This button is in DOM and visible on screen.</p>
+    <button id="visibleBtn">I am Visible</button>
+
+    <p><strong>Hidden Button:</strong> This button is in DOM but 
+      <span style="color:red;">not visible</span> because of <code>display:none</code>.
+    </p>
+    <button id="hiddenBtn" class="hidden">I am Hidden</button>
+  </div>
+
+  <!-- isEnabled Example -->
+  <div class="section">
+    <h3 style="color:#ff4500;">isEnabled()</h3>
+    <p>First button is enabled, second is disabled:</p>
+    <button id="activeBtn">Enabled Button</button>
+    <button id="disabledBtn" disabled>Disabled Button</button>
+  </div>
+
+  <!-- isSelected Example - Checkboxes -->
+  <div class="section">
+    <h3 style="color:#800080;">isSelected() - Checkboxes</h3>
+    <label><input type="checkbox" id="check1"> Option 1</label>
+    <label><input type="checkbox" id="check2" checked> Option 2 (pre-selected)</label>
+  </div>
+
+  <!-- isSelected Example - Radio Buttons -->
+  <div class="section">
+    <h3 style="color:#008b8b;">isSelected() - Radio Buttons</h3>
+    <label><input type="radio" name="lang" id="lang1" checked> English</label>
+    <label><input type="radio" name="lang" id="lang2"> Hindi</label>
+  </div>
+
+</body>
+</html>
